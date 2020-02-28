@@ -23,6 +23,6 @@ io.on("connection", function(socket){
 	});
 });
 
-http.listen(3000, function(){
+http.listen(process.env.PORT, function(){
 	console.log("Server listen on port 3000");
 });
