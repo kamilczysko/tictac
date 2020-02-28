@@ -4,10 +4,10 @@ let http = require("http").createServer(app);
 let io = require("socket.io")(http);
 
 app.get("/tictac", function(req, res){
-	res.sendFile("index.html", {root: "../game"});
+	res.sendFile("index.html", {root: "game"});
 });
 
-app.use("/tictac", express.static("../game"));
+app.use("/tictac", express.static("game"));
 
 io.on("connection", function(socket){
 	console.log("connected");
