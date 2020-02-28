@@ -1,0 +1,19 @@
+.row {
+	overflow: auto;
+}
+.cell {
+	background-color: red;
+	width: 35;
+	height: 35;
+	float: left;
+	margin: 5px;
+}
+#char{
+	font-size: 30px;
+	font-weight: lighter;
+	font-family: fantasy;
+	width: inherit;
+	height: inherit;
+	position:absolute;
+	text-align:center;
+}

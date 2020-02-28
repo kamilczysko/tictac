@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="tictac.js"></script>
+		<script src="board.js"></script>
+	</head>
+
+	<body>
+		<p>tictac</p>
+		<div id ="board">
+			<script>drawBoard();</script>
+		</div>
+		<p id="winner">Play!</p>
+		<button onclick="cleanScoreAndDrawBoard()">clear</button>
+		<hr>
+	</body>
+
+</html>
