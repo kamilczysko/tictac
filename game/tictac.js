@@ -12,6 +12,7 @@ tictacSocket.on("loginInfo", function(msg){
   if(msg == false){
     alert("Too much players bitch! Just watch!");
   }else{
+    document.getElementById("linfo").innerHTML="<p style=\"color:green\">Now you can play!</p>"
     login();
   }
 
