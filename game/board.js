@@ -17,6 +17,7 @@ function newBegining(){
 }
 
 function login(){isLogged = true;}
+function logout(){isLogged = false;}
 
 function drawBoard(){
 	let boardSpace = document.getElementById("board");
@@ -35,6 +36,7 @@ function drawBoard(){
 		boardSpace.appendChild(row);
 	}
 }
+
 socket.on("selectedPos", function(msg){
 	let row = msg['rowNum'];
 	let col = msg['colNum'];
@@ -93,6 +95,7 @@ function drawSign(cellId){
 	element.innerHTML = "<b id=\"char\">"+actualChar+"</b>";
 }
 
+
 function changeSign(){
 	if(actualChar == "O"){
 		actualChar = "X";
@@ -132,19 +135,21 @@ function checkBoard(){
 	return 0;
 }
 
-
 function winnerX(){
 	let winnerLabel = document.getElementById("winner");
 	winnerLabel.innerHTML = "<b>X</b> is winner";
 }
+
 function winnerO(){
 	let winnerLabel = document.getElementById("winner");
 	winnerLabel.innerHTML = "<b>O</b> is winner";
 }
+
 function draw(){
 	let winnerLabel = document.getElementById("winner");
 	winnerLabel.innerHTML = "It's draw!!!";
 }
+
 function cleanScore(){
 	let winnerLabel = document.getElementById("winner");
 	winnerLabel.innerHTML="Play!";
